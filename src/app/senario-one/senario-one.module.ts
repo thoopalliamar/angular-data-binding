@@ -6,6 +6,7 @@ import { ComponeoneComponent } from './componeone/componeone.component';
   imports: [
     CommonModule
   ],
-  declarations: []
+  exports:[ComponeoneComponent],
+  declarations: [ComponeoneComponent]
 })
 export class SenarioOneModule { }

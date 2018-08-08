@@ -7,7 +7,7 @@ import {ComponeoneComponent} from './senario-one/componeone/componeone.component
 @NgModule({
   declarations: [
     AppComponent,
-    ComponeoneComponent
+  
   ],
   imports: [
     BrowserModule,
