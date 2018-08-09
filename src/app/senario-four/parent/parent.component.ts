@@ -10,7 +10,7 @@ import {AfterViewInit} from '@angular/core';
 })
 export class ParentComponent {
   message;
-  @ViewChild(ChildComponent)  parentvar;
+   
 
   receivemessage($event){
      this.message=$event;

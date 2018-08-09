@@ -6,6 +6,7 @@ import { SenarioTwoModule } from './senario-two/senario-two.module';
 import { SenarioThreeModule } from './senario-three/senario-three.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { SenarioFourModule } from './senario-four/senario-four.module';
+import { SenarioSixModule } from './senario-six/senario-six.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SenarioFourModule } from './senario-four/senario-four.module';
     SenarioTwoModule,
     SenarioThreeModule,
     FormsModule,
-    SenarioFourModule
+    SenarioFourModule,
+    SenarioSixModule
    
   ],
   providers: [],
