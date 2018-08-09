@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildfiveComponent implements OnInit {
 
+  message;
+   
+
+  messageEvent(data:string){
+     this.message=data;
+  }
+  
   constructor() { }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-grandgrandchild',
@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrandgrandchildComponent implements OnInit {
 
+  @Output() messageEvent = new EventEmitter<string>();
+  message ;
+    clickchild(name){
+    this.message=name;
+    this.messageEvent.emit(this.message)
+  }
   constructor() { }
 
   ngOnInit() {

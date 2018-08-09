@@ -8,6 +8,9 @@ import { GrandgrandchildComponent } from './childfive/grandchildfive/grandgrandc
   imports: [
     CommonModule
   ],
+  exports:[
+    ChildfiveComponent
+  ],
   declarations: [ChildfiveComponent, GrandchildfiveComponent, GrandgrandchildComponent]
 })
 export class SenarioFiveModule { }
