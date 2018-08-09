@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'appchildfour',
@@ -6,12 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  childvar = "hello";
-  // clickchild(name){
-  //   this.childvar=name;
-  // }
+  @Output() messageEvent = new EventEmitter<string>();
+  message ;
+    clickchild(name){
+    this.message=name;
+    this.messageEvent.emit(this.message)
+  }
   constructor() { }
 
+  // sendmessage(){
+  //   this.messageEvent.emit(this.message)
+  // }
   ngOnInit() {
   }
 

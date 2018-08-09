@@ -1,4 +1,4 @@
-import { Component, Output} from '@angular/core';
+import { Component, Output,EventEmitter} from '@angular/core';
 import {ChildComponent}  from './child/child.component';
 import {ViewChild} from '@angular/core';
 import {AfterViewInit} from '@angular/core';
@@ -8,15 +8,18 @@ import {AfterViewInit} from '@angular/core';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css']
 })
-export class ParentComponent implements AfterViewInit {
+export class ParentComponent {
+  message;
+  @ViewChild(ChildComponent)  parentvar;
 
-  @ViewChild(ChildComponent) localfour;
-  @Output() parentvar;
+  receivemessage($event){
+     this.message=$event;
+  }
   
   constructor() { }
-  ngAfterViewInit(){
-    this.parentvar= this.localfour.childvar;
-  }
+  // ngAfterViewInit(){
+  //   this.parentvar= this.message.message;
+  // }
  
 
 }
